@@ -2903,8 +2903,28 @@
                         <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+		    <th scope="row">Economic G</th>\
+                        <td class="visible-with-data" id="Economic G">' + (feature.properties['Economic G'] !== null ? autolinker.link(String(feature.properties['Economic G']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                         <th scope="row">FSQ Level</th>\
-                        <td class="visible-with-data" id="FSQ Level">' + (feature.properties['FSQ Level'] !== null ? autolinker.link(String(feature.properties['FSQ Level']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+		    </tr>\
+                    <tr>\
+		    <th scope="row">NACE Secti</th>\
+                        <td class="visible-with-data" id="NACE Secti">' + (feature.properties['NACE Secti'] !== null ? autolinker.link(String(feature.properties['NACE Secti']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+		    <th scope="row">NACE Sec_1</th>\
+                        <td class="visible-with-data" id="NACE Sec_1">' + (feature.properties['NACE Sec_1'] !== null ? autolinker.link(String(feature.properties['NACE Sec_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    </tr>\
+		    <th scope="row">NACE Divis</th>\
+                        <td class="visible-with-data" id="NACE Divis">' + (feature.properties['NACE Divis'] !== null ? autolinker.link(String(feature.properties['NACE Divis']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NACE Div_1</th>\
+                        <td class="visible-with-data" id="NACE Div_1">' + (feature.properties['NACE Div_1'] !== null ? autolinker.link(String(feature.properties['NACE Div_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+		    <td class="visible-with-data" id="FSQ Level">' + (feature.properties['FSQ Level'] !== null ? autolinker.link(String(feature.properties['FSQ Level']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">FSQ Leve_1</th>\
@@ -2915,25 +2935,6 @@
                         <td class="visible-with-data" id="FSQ Leve_2">' + (feature.properties['FSQ Leve_2'] !== null ? autolinker.link(String(feature.properties['FSQ Leve_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">NACE Divis</th>\
-                        <td class="visible-with-data" id="NACE Divis">' + (feature.properties['NACE Divis'] !== null ? autolinker.link(String(feature.properties['NACE Divis']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">NACE Secti</th>\
-                        <td class="visible-with-data" id="NACE Secti">' + (feature.properties['NACE Secti'] !== null ? autolinker.link(String(feature.properties['NACE Secti']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">NACE Div_1</th>\
-                        <td class="visible-with-data" id="NACE Div_1">' + (feature.properties['NACE Div_1'] !== null ? autolinker.link(String(feature.properties['NACE Div_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">NACE Sec_1</th>\
-                        <td class="visible-with-data" id="NACE Sec_1">' + (feature.properties['NACE Sec_1'] !== null ? autolinker.link(String(feature.properties['NACE Sec_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Economic G</th>\
-                        <td class="visible-with-data" id="Economic G">' + (feature.properties['Economic G'] !== null ? autolinker.link(String(feature.properties['Economic G']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
