@@ -12,32 +12,66 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-	#map-title {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        z-index: 1000;
-        background-color: rgba(255, 255, 255, 0.6);
-        padding: 8px 16px;
-        border-radius: 5px;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        box-shadow: 0 0 5px rgba(0,0,0,0.3);
-	}
-        </style>
-        <title></title>
+		    html, body, #map {
+		        width: 100%;
+		        height: 100%;
+		        padding: 0;
+		        margin: 0;
+		    }
+
+		    #map-title {
+		        position: absolute;
+		        top: 10px;
+		        left: 55px;
+		        z-index: 1000;
+		        background-color: rgba(255, 255, 255, 0.6);
+		        padding: 6px 14px;
+		        border-radius: 5px;
+		        font-family: 'Open Sans', sans-serif;
+		        font-size: 20px;
+		        font-weight: bold;
+		        color: #333;
+		        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		        transform: none !important; /* ✅ this removes centering */
+		    }
+
+		    #logo-row {
+		        position: absolute;
+		        top: 45px; /* Adjust if needed to move closer/further from the title */
+		        left: 200px;
+		        z-index: 1000;
+		        display: flex;
+		        gap: 12px; /* space between logos */
+		        background-color: rgba(0, 0, 0, 0);
+		        padding: 6px 12px;
+		        border-radius: 5px;
+		        box-shadow: 0 0 5px rgba(0,0,0,0);
+		        align-items: center;
+		    }
+
+		    #logo-rsup {
+		        height: 18px; /* Customize independently */
+		        width: auto;
+		    }
+
+		    #logo-tspa {
+		        height: 15px; /* Customize independently */
+		        width: auto;
+		    }
+		</style>
+        <title>Academic City Economic Web Map</title>
     </head>
     <body>
 	<div id="map-title">Academic City Economic Web Map</div>
-        <div id="map">
+		<div id="logo-row">
+		    <a href="https://www.rsup.city" target="_blank">
+		        <img id="logo-rsup" src="images/RSUP_Web.png" alt="RSUP Logo">
+		    </a>
+		    <a href="https://www.tspa.eu" target="_blank">
+		        <img id="logo-tspa" src="images/TSPA_Web.png" alt="TSPA Logo">
+		    </a>
+		</div>
+		<div id="map"></div>
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
